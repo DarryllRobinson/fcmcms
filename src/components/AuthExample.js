@@ -28,6 +28,7 @@ const AuthExample = () => (
       <Route path="/public" component={Public} />
       <Route path="/login" component={Login} />
       <PrivateRoute path="/protected" component={Protected} />
+      <PrivateRoute path="/callback" component={Callback} />
     </div>
   </Router>
 );
@@ -82,6 +83,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 const Public = () => <h3>Public</h3>;
 const Protected = () => <h3>Protected</h3>;
+const Callback = () => <h3>Callback</h3>;
 
 class Login extends React.Component {
   state = {
